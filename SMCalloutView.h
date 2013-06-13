@@ -44,6 +44,11 @@ extern NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView;
 @property (nonatomic, readonly) SMCalloutArrowDirection currentArrowDirection;
 @property (nonatomic, retain) SMCalloutBackgroundView *backgroundView; // default is [SMCalloutDrawnBackgroundView new]
 
+@property (nonatomic, assign) CGFloat marginLeft;
+@property (nonatomic, assign) CGFloat marginTop;
+@property (nonatomic, assign) CGFloat marginRight;
+@property (nonatomic, assign) CGFloat marginBottom;
+
 // Custom title/subtitle views. if these are set, the respective title/subtitle properties will be ignored.
 // Keep in mind that SMCalloutView calls -sizeThatFits on titleView/subtitleView if defined, so your view
 // may be resized as a result of that (especially if you're using UILabel/UITextField). You may want to subclass

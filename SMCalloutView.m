@@ -215,6 +215,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     
     // figure out the constrained view's rect in our popup view's coordinate system
     CGRect constrainedRect = [constrainedLayer convertRect:constrainedLayer.bounds toLayer:layer];
+    constrainedRect = CGRectMake(constrainedRect.origin.x + self.marginLeft, constrainedRect.origin.y + self.marginTop, constrainedRect.size.width - (self.marginLeft + self.marginRight), constrainedRect.size.height - (self.marginTop + self.marginBottom));
     
     // form our subviews based on our content set so far
     [self rebuildSubviews];
