@@ -63,6 +63,9 @@ extern NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView;
 
 @property (nonatomic, assign) SMCalloutAnimation presentAnimation, dismissAnimation; // default SMCalloutAnimationBounce, SMCalloutAnimationFade respectively
 
+@property (nonatomic, retain) UILabel *titleLabel;
+@property (nonatomic, retain) UILabel *subtitleLabel;
+
 // Presents a callout view by adding it to "inView" and pointing at the given rect of inView's bounds.
 // Constrains the callout to the bounds of the given view. Optionally scrolls the given rect into view (plus margins)
 // if -delegate is set and responds to -delayForRepositionWithSize.
@@ -93,6 +96,10 @@ extern NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView;
 
 // Draws a custom background matching the system background but can grow in height.
 @interface SMCalloutDrawnBackgroundView : SMCalloutBackgroundView
+@end
+
+// flat design
+@interface MMCalloutFlatBackgroundView : SMCalloutBackgroundView
 @end
 
 //
