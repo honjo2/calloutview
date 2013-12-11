@@ -38,7 +38,8 @@ extern NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView;
 
 @interface SMCalloutView : UIView
 
-@property (nonatomic, unsafe_unretained) id<SMCalloutViewDelegate> delegate;
+//@property (nonatomic, unsafe_unretained) id<SMCalloutViewDelegate> delegate;
+@property (nonatomic, retain) id<SMCalloutViewDelegate> delegate;
 @property (nonatomic, copy) NSString *title, *subtitle; // title/titleView relationship mimics UINavigationBar.
 @property (nonatomic, retain) UIView *leftAccessoryView, *rightAccessoryView;
 @property (nonatomic, readonly) SMCalloutArrowDirection currentArrowDirection;
